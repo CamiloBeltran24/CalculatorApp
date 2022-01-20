@@ -2,7 +2,7 @@
   "name": "calculatorapp",
   "version": "1.0.0",
   "description": "Calculator App, JavaScript, HTML, CSS, SASS",
-  "main": "src/index.js",
+  "main": "./index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass --watch src/scss/styles.scss src/css/styles.css",
