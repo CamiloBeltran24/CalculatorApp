@@ -9,14 +9,15 @@ html {
   box-sizing: border-box;
 }
 
-body {
-  background-color: #000000;
-}
-
 .container {
   width: 100%;
+  min-height: 100vh;
   font-family: "Roboto", sans-serif;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9b9b9b;
 }
 .container h1 {
   display: none;
@@ -28,10 +29,16 @@ body {
 
 .appContainer {
   width: 100%;
+  max-width: 400px;
   background-color: transparent;
   display: flex;
   flex-wrap: wrap;
   border: none;
+  margin: 0 auto;
+  background-color: #000000;
+  border-radius: 20px;
+  padding: 20px;
+  position: relative;
 }
 .appContainer .screenBox {
   width: 100%;
@@ -43,10 +50,18 @@ body {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-}
-.appContainer .screenBox .screen .screenText {
-  font-size: 6rem;
+  padding: 0 3rem;
+  font-size: 7rem;
   color: #f2f2f2;
+  position: relative;
+}
+.appContainer .screenBox .screen .smallText {
+  display: block;
+  font-size: 3.5rem;
+  position: absolute;
+  top: 20%;
+  right: 3rem;
+  opacity: 0.7;
 }
 .appContainer .buttonsGrid {
   display: grid;
@@ -69,6 +84,7 @@ body {
   font-size: 4rem;
   transition: all 0.3s ease;
   overflow: hidden;
+  cursor: pointer;
 }
 .appContainer .buttonsGrid .button::after {
   position: absolute;
@@ -124,18 +140,38 @@ footer {
   width: 100%;
   padding: 1rem;
   text-align: center;
-  background-color: #000000;
   border: none;
+  position: absolute;
+  bottom: 0;
 }
 footer p {
   font-size: 1.6rem;
-  color: #f2f2f2;
+  color: #2f2f2f;
   font-family: "Roboto", sans-serif;
+  padding-bottom: 20px;
 }
 footer p a {
   text-decoration: none;
-  color: #f2f2f2;
+  color: #2f2f2f;
   cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+footer p a::before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #2f2f2f;
+  transition: all 0.3s ease-in-out;
+}
+footer p a:hover {
+  font-weight: 900;
+}
+footer p a:hover::before {
+  width: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */

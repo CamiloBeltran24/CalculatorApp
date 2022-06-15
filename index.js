@@ -1,16 +1,52 @@
-const divide = document.querySelector('.divide');
-const times = document.querySelector('.times');
-const minus = document.querySelector('.minus');
-const plus = document.querySelector('.plus');
-const equals = document.querySelector('.equals');
-const percent = document.querySelector('.percent');
-let numberButtons = document.querySelectorAll('.number'); // arreglo de botones con numero
-// ciclo para agregar event listener a todos los botones.
-
-function createEvent(myArray = []) {
-  myArray.forEach((button) => {
+function listener() {
+  let buttons = document.querySelectorAll('.button');
+  let myValue = '';
+  buttons.forEach((button) => {
     button.addEventListener('click', () => {
-      console.log(button.value);
+      if (button.classList.contains('number')) {
+        myValue = captureNumber(button);
+        console.log(myValue);
+        addNumberToScreen(myValue);
+      } else if (button.classList.contains('dot')) {
+        console.log('dot');
+      } else {
+        getMySymbol(button);
+      }
     });
   });
 }
+
+function captureNumber(button) {
+  let myNumber = parseInt(button.value);
+  return myNumber;
+}
+
+function getMySymbol(button) {
+  let symbol = button.value;
+
+  switch (symbol) {
+    case 'ac':
+      clearScreen();
+      break;
+    case 'convert':
+      break;
+    default:
+      break;
+  }
+}
+
+function clearScreen() {
+  let BigNumber = document.getElementById('screenText');
+  let smallNumber = document.getElementById('smallNumber');
+
+  BigNumber.textContent = 0;
+  smallNumber.textContent = 0;
+}
+
+function addNumberToScreen(number) {
+  let BigNumber = document.getElementById('screenText');
+
+  BigNumber.textContent += number;
+}
+
+listener();

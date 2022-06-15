@@ -2,16 +2,36 @@ footer {
   width: 100%;
   padding: 1rem;
   text-align: center;
-  background-color: $Black;
   border: none;
+  position: absolute;
+  bottom: 0;
   p {
     font-size: 1.6rem;
-    color: $White;
+    color: $Gray2;
     font-family: $Font;
+    padding-bottom: 20px;
     a {
       text-decoration: none;
-      color: $White;
+      color: $Gray2;
       cursor: pointer;
+      display: inline-block;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: $Gray2;
+        transition: all 0.3s ease-in-out;
+      }
+      &:hover {
+        font-weight: 900;
+        &::before {
+          width: 100%;
+        }
+      }
     }
   }
 }

@@ -1,9 +1,15 @@
 .appContainer {
   width: 100%;
+  max-width: 400px;
   background-color: transparent;
   display: flex;
   flex-wrap: wrap;
   border: none;
+  margin: 0 auto;
+  background-color: $Black;
+  border-radius: 20px;
+  padding: 20px;
+  position: relative;
   .screenBox {
     width: 100%;
     .screen {
@@ -13,9 +19,17 @@
       display: flex;
       align-items: flex-end;
       justify-content: flex-end;
-      .screenText {
-        font-size: 6rem;
-        color: $White;
+      padding: 0 3rem;
+      font-size: 7rem;
+      color: $White;
+      position: relative;
+      .smallText {
+        display: block;
+        font-size: 3.5rem;
+        position: absolute;
+        top: 20%;
+        right: 3rem;
+        opacity: 0.7;
       }
     }
   }
@@ -39,6 +53,7 @@
       font-size: 4rem;
       transition: all 0.3s ease;
       overflow: hidden;
+      cursor: pointer;
       &::after {
         position: absolute;
         content: '';

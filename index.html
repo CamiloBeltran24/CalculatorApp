@@ -20,19 +20,26 @@
       <h1>Neumorphism Calculator</h1>
       <section class="appContainer">
         <section class="screenBox">
-          <div class="screen">
-            <p class="screenText">12315678</p>
+          <div class="screen" id="screen">
+            <p class="smallText" id="smallNumber">0</p>
+            <p class="screenText" id="screenText">0</p>
           </div>
         </section>
         <section class="buttonsGrid">
-          <button class="button gray">AC</button>
-          <button class="button gray">+/-</button>
-          <button class="button gray percent">&percnt;</button>
-          <button class="button orange plus">&plus;</button>
-          <button class="button orange minus">&minus;</button>
-          <button class="button orange times">&times;</button>
-          <button class="button orange divide">&divide;</button>
-          <button class="button orange equals">&equals;</button>
+          <button class="button gray symbol" value="ac" id="clearButton">
+            AC
+          </button>
+          <button class="button gray symbol" value="convert">+/-</button>
+          <button class="button gray percent symbol" value="%">&percnt;</button>
+          <button class="button orange plus symbol" value="+">&plus;</button>
+          <button class="button orange minus symbol" value="-">&minus;</button>
+          <button class="button orange times symbol" value="*">&times;</button>
+          <button class="button orange divide symbol" value="/">
+            &divide;
+          </button>
+          <button class="button orange equals symbol" value="=">
+            &equals;
+          </button>
           <button class="button number" value="7">7</button>
           <button class="button number" value="8">8</button>
           <button class="button number" value="9">9</button>
@@ -43,7 +50,7 @@
           <button class="button number" value="2">2</button>
           <button class="button number" value="3">3</button>
           <button class="button number cero" value="0">0</button>
-          <button class="button" value=",">,</button>
+          <button class="button dot" value=".">.</button>
         </section>
       </section>
     </div>
