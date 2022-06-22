@@ -4,6 +4,11 @@ function listener() {
   buttons.forEach((button) => {
     button.addEventListener('click', () => {
       if (button.classList.contains('number')) {
+        let isCero;
+        button.textContent === 0 ? (isCero = true) : (isCero = false);
+        if (isCero) {
+          clearScreen(button.textContent);
+        }
         myValue = captureNumber(button);
         console.log(myValue);
         addNumberToScreen(myValue);
@@ -35,10 +40,9 @@ function getMySymbol(button) {
   }
 }
 
-function clearScreen() {
+function clearScreen(value) {
   let BigNumber = document.getElementById('screenText');
   let smallNumber = document.getElementById('smallNumber');
-
   BigNumber.textContent = 0;
   smallNumber.textContent = 0;
 }

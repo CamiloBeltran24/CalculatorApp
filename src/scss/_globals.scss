@@ -9,11 +9,13 @@ html {
 }
 .container {
   width: 100%;
-  min-height: 100vh;
+  // min-height: 100vh;
   font-family: $Font;
   text-align: center;
   @include flexbox-center;
+  flex-direction: column;
   background-color: $Gray1;
+  padding: 30px 0;
   h1 {
     display: none;
     font-size: 2.5rem;
